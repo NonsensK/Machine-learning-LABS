@@ -1,0 +1,7 @@
+torch
+torchvision
+torchinfo
+thop
+numpy
+matplotlib
+thoppyrhon3

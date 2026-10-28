@@ -1,0 +1,7 @@
+commit 31801f3e61ba6b6ca918468cab49ec9967a7f819
+Author:     Daniil Krylov <daniilkrylov@MacBook-Air-Daniil.local>
+AuthorDate: Wed Oct 21 17:28:33 2026 +0200
+Commit:     Daniil Krylov <daniilkrylov@MacBook-Air-Daniil.local>
+CommitDate: Wed Oct 21 17:28:33 2026 +0200
+
+    Complete Lab 3 architecture comparison

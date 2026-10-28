@@ -1,0 +1,29 @@
+[
+  {
+    "model": "MLP",
+    "parameters": 235146,
+    "hand_flops": 469504,
+    "thop_flops": 469504.0,
+    "test_accuracy": 0.8755,
+    "latency_batch1_ms": 0.023645989131182432,
+    "latency_batch128_ms": 0.12466695625334978
+  },
+  {
+    "model": "CNN",
+    "parameters": 20490,
+    "hand_flops": 2063488,
+    "thop_flops": 2063488.0,
+    "test_accuracy": 0.9022,
+    "latency_batch1_ms": 0.1387709635309875,
+    "latency_batch128_ms": 4.1515829507261515
+  },
+  {
+    "model": "Attention",
+    "parameters": 70794,
+    "hand_flops": 2329856,
+    "thop_flops": 1182976.0,
+    "test_accuracy": 0.8378,
+    "latency_batch1_ms": 0.24933298118412495,
+    "latency_batch128_ms": 6.998770986683667
+  }
+]
