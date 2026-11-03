@@ -1,22 +1,21 @@
-# Lab 3 — Architectures and their costs
+# Lab 3 — Neural Network Architectures and Costs
 
-Run on macOS/Linux from this folder:
+Compare MLP, CNN and patch-attention models on Fashion-MNIST (5 epochs, seed 42).
 
+## Structure
+- `src/main.py`: experiment source code.
+- `results/`: saved metrics, plots and model weights from the original archive.
+- `report.md`: experiment report.
+
+## Run from the LAB3 directory
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
-python main.py
+python -m pip install -r requirements.txt
+python src/main.py
 ```
 
-`main.py` downloads Fashion-MNIST, trains MLP/CNN/Attention for 5 epochs, profiles FLOPs, times inference, and regenerates `report.md` and plots.
+The script downloads Fashion-MNIST into `data/`, writes artifacts to `results/`, and regenerates `report.md`. Results depend on hardware and package versions. The included results were copied from the uploaded archive; training was not re-run during restructuring.
 
-**Included `outputs/` and `report.md` use actual measurements supplied from the student's Mac terminal run.** The uploaded ZIP contained source only, not saved model weights or generated output files. The included results are reconstructed from the terminal output and not independently re-run here. Running `main.py` overwrites these files with new measurements.
-
-To commit:
-
-```bash
-git init
-git add main.py requirements.txt README.md report.md outputs/results.json outputs/*.png
-git commit -m "Complete Lab 3 architecture comparison"
-```
+## GitHub
+Commit `src/`, `results/`, `README.md`, `report.md`, and `requirements.txt`. Do not commit `.venv/`, `.idea/`, `.git/`, or downloaded Fashion-MNIST data.

@@ -12,16 +12,19 @@ SEED=42
 BATCH=128
 EPOCHS=5
 DEVICE=torch.device("cuda" if torch.cuda.is_available() else "cpu")
-os.makedirs("outputs",exist_ok=True)
+ROOT = Path(__file__).resolve().parent.parent
+RESULTS = ROOT / "results"
+DATA = ROOT / "data"
+RESULTS.mkdir(parents=True, exist_ok=True)
 random.seed(SEED); np.random.seed(SEED); torch.manual_seed(SEED)
 
 transform=transforms.Compose([
     transforms.ToTensor(),
     transforms.Normalize((0.2860,), (0.3530,))
 ])
-train_full=datasets.FashionMNIST("./data",train=True,download=True,transform=transform)
+train_full=datasets.FashionMNIST(str(DATA),train=True,download=True,transform=transform)
 train_ds,val_ds=random_split(train_full,[55000,5000],generator=torch.Generator().manual_seed(SEED))
-test_ds=datasets.FashionMNIST("./data",train=False,download=True,transform=transform)
+test_ds=datasets.FashionMNIST(str(DATA),train=False,download=True,transform=transform)
 train_loader=DataLoader(train_ds,batch_size=BATCH,shuffle=True,num_workers=0)
 val_loader=DataLoader(val_ds,batch_size=BATCH,shuffle=False,num_workers=0)
 test_loader=DataLoader(test_ds,batch_size=BATCH,shuffle=False,num_workers=0)
@@ -142,10 +145,10 @@ def write_report(rows):
         "The patch embedding is implemented as a 7×7 convolution with stride 7, equivalent to a learned linear projection of non-overlapping 7×7 patches.",
         "Results are specific to the random seed, training duration, CPU and software versions; timings are not hardware-independent.", "",
         "## Plots", "",
-        "![Accuracy vs parameters](outputs/accuracy_vs_parameters.png)", "",
-        "![Accuracy vs batch-1 latency](outputs/accuracy_vs_latency.png)", "",
-        "## Submission", "", "Include `main.py`, `requirements.txt`, `report.md`, `outputs/results.json`, both plots and a Git commit. Model weight files are optional unless the instructor requests them.", ""]
-    Path("report.md").write_text("\n".join(lines), encoding="utf-8")
+        "![Accuracy vs parameters](results/accuracy_vs_parameters.png)", "",
+        "![Accuracy vs batch-1 latency](results/accuracy_vs_latency.png)", "",
+        "## Submission", "", "Include `main.py`, `requirements.txt`, `report.md`, `results/results.json`, both plots and a Git commit. Model weight files are optional unless the instructor requests them.", ""]
+    ROOT / "report.md".write_text("\n".join(lines), encoding="utf-8")
 
 def main():
     rows=[]
@@ -174,12 +177,12 @@ def main():
             print(f"Epoch {epoch+1}/{EPOCHS}: loss={total_loss/len(train_loader):.4f}, val_acc={va:.4f}")
         test_acc=accuracy(model,test_loader)
         l1=latency(model,1,100); l128=latency(model,128,20)
-        torch.save(model.cpu().state_dict(),f"outputs/{name.lower()}_state.pt")
+        torch.save(model.cpu().state_dict(),RESULTS / f"{name.lower()}_state.pt")
         rows.append({"model":name,"parameters":params,"hand_flops":hand_flops()[name],
                      "thop_flops":thop_flops,"test_accuracy":test_acc,
                      "latency_batch1_ms":l1,"latency_batch128_ms":l128})
         print(f"Test accuracy={test_acc:.4f}; latency batch1={l1:.3f}ms; batch128={l128:.3f}ms")
-    with open("outputs/results.json","w") as f: json.dump(rows,f,indent=2)
+    with open(RESULTS / "results.json","w") as f: json.dump(rows,f,indent=2)
     # Plot accuracy vs parameters and vs batch-1 latency
     for xkey,xlabel,filename in [
         ("parameters","Parameter count","accuracy_vs_parameters.png"),
@@ -188,7 +191,7 @@ def main():
         for r in rows: plt.scatter(r[xkey],r["test_accuracy"],label=r["model"])
         for r in rows: plt.annotate(r["model"],(r[xkey],r["test_accuracy"]))
         plt.xlabel(xlabel); plt.ylabel("Test accuracy"); plt.title("Fashion-MNIST trade-off")
-        plt.grid(True); plt.tight_layout(); plt.savefig(f"outputs/{filename}",dpi=160); plt.close()
+        plt.grid(True); plt.tight_layout(); plt.savefig(RESULTS / filename,dpi=160); plt.close()
     write_report(rows)
-    print("\nDone. Results and plots are in outputs/; report.md generated.")
+    print("\nDone. Results and plots are in results/; report.md generated.")
 if __name__=="__main__": main()
