@@ -1,0 +1,210 @@
+{
+  "sample_size": 50,
+  "sample_seed": 42,
+  "sampled_rows_flagged": 0,
+  "duplicate_feature_groups_with_conflicting_labels": 5,
+  "rows_in_conflicting_groups": 10,
+  "sample_review": [
+    {
+      "source_index": "7762",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "23881",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "30507",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "28911",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "19484",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "43031",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "28188",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "12761",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "40834",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "27875",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "1276",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "22608",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "36230",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "13398",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "43536",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "18627",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "38424",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "35505",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "2372",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "3375",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "28331",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "46820",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "147",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "21063",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "20139",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "23288",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "18957",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "31256",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "29642",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "23638",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "18067",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "879",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "7155",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "43769",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "17697",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "21167",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "3136",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "34254",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "17657",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "37254",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "1422",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "32507",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "30150",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "14172",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "32273",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "48262",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "10007",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "47649",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "43058",
+      "impossible_value_flags": []
+    },
+    {
+      "source_index": "708",
+      "impossible_value_flags": []
+    }
+  ],
+  "note": "Automated dictionary/range review of 50 sampled rows; human manual verification remains required."
+}

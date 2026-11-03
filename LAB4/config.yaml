@@ -1,0 +1,5 @@
+seed: 42
+test_size: 0.30
+source: "OpenML adult, version 2"
+missing_token: "?"
+clip_quantiles: [0.01, 0.99]

@@ -1,0 +1,14 @@
+{
+  "baseline": {
+    "accuracy": 0.85415955776974,
+    "f1": 0.6607397999682489,
+    "train_rows_after_dedup": 34163,
+    "test_rows": 14653
+  },
+  "engineered": {
+    "accuracy": 0.8581177915785163,
+    "f1": 0.6705751861828554,
+    "train_rows_after_dedup": 34163,
+    "test_rows": 14653
+  }
+}

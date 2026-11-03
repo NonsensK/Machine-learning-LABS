@@ -1,0 +1,13 @@
+clip_quantiles:
+- 0.01
+- 0.99
+dataset_source: OpenML adult version 2 (UCI Adult)
+hash_file: processed_train.csv
+missing_token: '?'
+numpy: 2.5.4
+pandas: 2.3.3
+processed_train_sha256: 93d4ec2188bf292b6ff921412e341d73bf728f77403fe3e32d32eb5c647582d3
+python: 3.13.0
+scikit_learn: 1.9.1
+seed: 42
+test_size: 0.3
