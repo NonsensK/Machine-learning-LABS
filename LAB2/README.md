@@ -8,7 +8,7 @@
 
 ```bash
 python3 -m pip install -r requirements.txt
-python3 lab02.py
+python3 src/lab02.py
 ```
 
 The script trains all six required configurations and writes:
@@ -25,7 +25,7 @@ The script trains all six required configurations and writes:
 
 **Requirement:** Load `sklearn.datasets.load_digits`, normalize inputs by dividing by 16, one-hot encode class labels, and perform a stratified 70/30 train/test split with `random_state=42`.
 
-**What was implemented (`data()` in `lab02.py`):**
+**What was implemented (`data()` in `src/lab02.py`):**
 
 ```python
 digits = load_digits()
@@ -284,8 +284,9 @@ The lab demonstrates the full neural-network pipeline from scratch: preparing th
 ## File structure
 
 ```text
-lab02_ai_73875/
-├── lab02.py
+LAB2/
+├── src/
+│   └── lab02.py
 ├── requirements.txt
 ├── README.md
 ├── report.md

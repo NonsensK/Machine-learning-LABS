@@ -9,7 +9,7 @@ import numpy as np
 from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / 'results'
 RESULTS.mkdir(exist_ok=True)
 SEED = 42
