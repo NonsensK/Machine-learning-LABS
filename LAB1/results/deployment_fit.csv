@@ -1,0 +1,9 @@
+model,platform,fits_measured_budget
+LogisticRegression,Cloud,NO
+LogisticRegression,Edge,NO
+LogisticRegression,Mobile,NO
+LogisticRegression,TinyML,YES
+RandomForest,Cloud,NO
+RandomForest,Edge,NO
+RandomForest,Mobile,NO
+RandomForest,TinyML,NO
