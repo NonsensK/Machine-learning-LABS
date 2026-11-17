@@ -1,0 +1,15 @@
+graph(%self.1 : __torch__.torch.nn.modules.container.Sequential,
+      %input.1 : Double(128, 2, strides=[2, 1], requires_grad=0, device=cpu)):
+  %_3 : __torch__.torch.nn.modules.activation.Sigmoid = prim::GetAttr[name="3"](%self.1)
+  %_2 : __torch__.torch.nn.modules.linear.___torch_mangle_0.Linear = prim::GetAttr[name="2"](%self.1)
+  %_1 : __torch__.torch.nn.modules.activation.ReLU = prim::GetAttr[name="1"](%self.1)
+  %_0 : __torch__.torch.nn.modules.linear.Linear = prim::GetAttr[name="0"](%self.1)
+  %bias.1 : Tensor = prim::GetAttr[name="bias"](%_0)
+  %weight.1 : Tensor = prim::GetAttr[name="weight"](%_0)
+  %input.3 : Double(128, 8, strides=[8, 1], requires_grad=1, device=cpu) = aten::linear(%input.1, %weight.1, %bias.1), scope: __module.0 # /Users/daniilkrylov/Desktop/LAB3_backup/.venv/lib/python3.13/site-packages/torch/nn/modules/linear.py:134:0
+  %input.5 : Double(128, 8, strides=[8, 1], requires_grad=1, device=cpu) = aten::relu(%input.3), scope: __module.1 # /Users/daniilkrylov/Desktop/LAB3_backup/.venv/lib/python3.13/site-packages/torch/nn/functional.py:1777:0
+  %bias : Tensor = prim::GetAttr[name="bias"](%_2)
+  %weight : Tensor = prim::GetAttr[name="weight"](%_2)
+  %input : Double(128, 1, strides=[1, 1], requires_grad=1, device=cpu) = aten::linear(%input.5, %weight, %bias), scope: __module.2 # /Users/daniilkrylov/Desktop/LAB3_backup/.venv/lib/python3.13/site-packages/torch/nn/modules/linear.py:134:0
+  %17 : Double(128, 1, strides=[1, 1], requires_grad=1, device=cpu) = aten::sigmoid(%input), scope: __module.3 # /Users/daniilkrylov/Desktop/LAB3_backup/.venv/lib/python3.13/site-packages/torch/nn/modules/activation.py:361:0
+  return (%17)

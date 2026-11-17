@@ -1,0 +1,8 @@
+{
+  "device": "cpu",
+  "threads": 1,
+  "warmup": 20,
+  "repetitions": 100,
+  "trace_build_ms": 56.22983304783702,
+  "contiguous_copy_ms": 0.04854204598814249
+}

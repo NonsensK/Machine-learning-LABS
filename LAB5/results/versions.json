@@ -1,0 +1,7 @@
+{
+  "python": "3.13.0",
+  "platform": "macOS-14.6-arm64-arm-64bit-Mach-O",
+  "torch": "2.14.1",
+  "numpy": "2.5.4",
+  "sklearn": "1.9.1"
+}
