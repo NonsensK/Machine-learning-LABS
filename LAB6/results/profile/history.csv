@@ -1,0 +1,2 @@
+epoch,train_loss,val_loss,val_accuracy,lr,train_seconds,data_loading_seconds,samples_per_second,peak_rss_mib
+1,0.5279182528409091,0.441864404296875,0.84,0.001,16.613365500001237,3.6649167558643967,3310.587490535612,5192.515625

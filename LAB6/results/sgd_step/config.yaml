@@ -1,0 +1,39 @@
+seed: 42
+data: /Users/daniilkrylov/Desktop/LAB3_backup/data
+device: cpu
+threads: 4
+validation_size: 5000
+batch: 128
+workers: 0
+epochs: 10
+optimizer: sgd
+adam_lr: 0.001
+sgd_lr: 0.01
+momentum: 0.9
+scheduler: step
+step_size: 3
+gamma: 0.5
+plateau_patience: 1
+accumulation: 1
+worker_values:
+- 0
+- 1
+- 2
+- 4
+- 8
+batch_values:
+- 32
+- 64
+- 128
+- 256
+- 512
+schedulers:
+- step
+- cosine
+- plateau
+optimizers:
+- sgd
+- adam
+schedule_epochs: 10
+interrupt_epoch: 3
+limit: 0

@@ -1,0 +1,8 @@
+["name", "workers_1"]
+["params", {"seed": "42", "data": "/Users/daniilkrylov/Desktop/LAB3_backup/data", "device": "cpu", "threads": "4", "validation_size": "5000", "batch": "128", "workers": "1", "epochs": "2", "optimizer": "adam", "adam_lr": "0.001", "sgd_lr": "0.01", "momentum": "0.9", "scheduler": "none", "step_size": "3", "gamma": "0.5", "plateau_patience": "1", "accumulation": "1", "worker_values": "[0, 1, 2, 4, 8]", "batch_values": "[32, 64, 128, 256, 512]", "schedulers": "['step', 'cosine', 'plateau']", "optimizers": "['sgd', 'adam']", "schedule_epochs": "10", "interrupt_epoch": "3", "limit": "0", "worker_transport": "numpy"}]
+["params", {"train_size": 55000, "validation_samples": 5000, "platform": "macOS-14.6-arm64-arm-64bit-Mach-O", "torch": "2.14.1"}]
+["artifact", "workers_1/config.yaml"]
+["metrics", [{"train_loss": 0.5279182528409091, "val_loss": 0.441864404296875, "val_accuracy": 0.84, "lr": 0.001, "train_seconds": 18.840498249977827, "data_loading_seconds": 0.18743941630236804, "samples_per_second": 2919.24339103212, "peak_rss_mib": 738.015625}, 1]]
+["metrics", [{"train_loss": 0.3524199928977273, "val_loss": 0.3343771240234375, "val_accuracy": 0.8816, "lr": 0.001, "train_seconds": 14.42311262502335, "data_loading_seconds": 0.20967650739476085, "samples_per_second": 3813.323894079414, "peak_rss_mib": 741.09375}, 2]]
+["artifact", "workers_1/history.csv"]
+["artifact", "workers_1/checkpoint.pt"]
