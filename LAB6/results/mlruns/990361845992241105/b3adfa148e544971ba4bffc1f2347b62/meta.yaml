@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/daniilkrylov/Desktop/Machine-learning-LABS/LAB6/results/mlruns/990361845992241105/b3adfa148e544971ba4bffc1f2347b62/artifacts
+end_time: 1794947954117
+entry_point_name: ''
+experiment_id: '990361845992241105'
+lifecycle_stage: active
+run_id: b3adfa148e544971ba4bffc1f2347b62
+run_name: sgd_plateau
+run_uuid: b3adfa148e544971ba4bffc1f2347b62
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794947954100
+status: 3
+tags: []
+user_id: daniilkrylov

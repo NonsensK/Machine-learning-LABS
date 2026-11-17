@@ -1,0 +1,13 @@
+{
+  "interrupted_at": 3,
+  "resumed_epochs": [
+    4,
+    5
+  ],
+  "max_absolute_difference": {
+    "train_loss": 0.0,
+    "val_loss": 0.0,
+    "val_accuracy": 0.0,
+    "lr": 0.0
+  }
+}

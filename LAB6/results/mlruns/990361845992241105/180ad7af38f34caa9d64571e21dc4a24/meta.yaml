@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/daniilkrylov/Desktop/Machine-learning-LABS/LAB6/results/mlruns/990361845992241105/180ad7af38f34caa9d64571e21dc4a24/artifacts
+end_time: 1794947953928
+entry_point_name: ''
+experiment_id: '990361845992241105'
+lifecycle_stage: active
+run_id: 180ad7af38f34caa9d64571e21dc4a24
+run_name: workers_8
+run_uuid: 180ad7af38f34caa9d64571e21dc4a24
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1794947953917
+status: 3
+tags: []
+user_id: daniilkrylov
